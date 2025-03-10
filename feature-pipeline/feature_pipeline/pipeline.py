@@ -64,8 +64,17 @@ def run(
 
    return metadata
 
+def transform(data :pd.DataFrame):
+      """
+      Wrapper containing all the Transformations from the ETL Pipeline.
+      
+      """
+      data = cleaning.rename_columns(data)
+      data = cleaning.cast_columns(data)
+      data = cleaning.encode_area_column(data)
+      return data
 
-
-
+if __name__ == "__main__":
+    fire.Fire(run)
 
 
