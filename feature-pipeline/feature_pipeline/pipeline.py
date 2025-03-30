@@ -74,6 +74,8 @@ def transform(data :pd.DataFrame):
       data = cleaning.encode_area_column(data)
       return data
 
+
+#Just testing this pipeline
 if __name__ == "__main__":
     fire.Fire(run)
 
